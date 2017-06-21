@@ -1,0 +1,23 @@
+@model nd.OpenDatabaseModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    @using (Html.BeginForm("Index", "Database", FormMethod.Post)) {
+        @Html.DisplayNameFor(model => model.DatabaseServer)
+        @Html.TextBoxFor(model => model.DatabaseServer)
+        @Html.DisplayNameFor(model => model.DatabaseName)
+        @Html.TextBoxFor(model => model.DatabaseName)
+        <input type="submit" value="Open Database"/>
+    }
+</body>
+</html>

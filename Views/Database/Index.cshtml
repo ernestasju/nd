@@ -1,0 +1,23 @@
+@model nd.DatabaseObjectsModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <table>
+        <tr><th>Type</th><th>ID</th><th>Name</th></tr>        
+        @foreach(var o in Model.Objects)
+        {
+            <tr><td>@o.Item1</td><td>@o.Item2</td><td>@o.Item3</td></tr>
+        }
+    </table>
+</body>
+</html>
